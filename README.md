@@ -63,5 +63,43 @@ The production-ready files will be available in the `build` directory.
 ## Troubleshooting
 If you encounter any issues, ensure all dependencies are installed correctly and that your Node.js version matches the project's requirements.
 
+## Reference Screenshots
+
+Landing page
+![Landing Page](assets/screenshots/landing_page.png)
+
+Signups page
+![Signup Page](assets/screenshots/signup_page.png)
+
+Login page
+![Login Page](assets/screenshots/login_page.png)
+
+Dashboard page
+![Dashboard Page](assets/screenshots/booking_page_nodata.png)
+
+## Validations Screenshots
+Signups page
+![Signup Page](assets/screenshots/signup_validation_email.png)
+
+![Signup Page](assets/screenshots/signup_validation_password.png)
+
+Login page
+![Login Page](assets/screenshots/login_validation.png)
+
+Booking Screen Validations
+![Booking Page](assets/screenshots/booking_page_30_min_steps.png)
+
+![Booking Page](assets/screenshots/booking_page_first_half_over_custom.png)
+
+![Booking Page](assets/screenshots/booking_page_fullday_over_custom.png)
+
+![Booking Page](assets/screenshots/booking_page_with_booking_type_custom_validation.png)
+
+![Booking Page](assets/screenshots/booking_page_with_booking_type_validation.png)
+
+![Booking Page](assets/screenshots/booking_page_second_half_over_custom.png)
+
+
+
 ## License
 This project is licensed under the [MIT License](LICENSE).

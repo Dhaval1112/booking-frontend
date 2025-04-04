@@ -1,11 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import api from "./../services/api";
 import { ToastContainer, toast } from "react-toastify";
 import AuthContext from "../context/AuthContext";
 
 const Dashboard = () => {
     const { user, logout, loading, token } = useContext(AuthContext);
+
+    if (!token) {
+        redirect("/login");
+    }
 
     console.log('user', user);
     const navigate = useNavigate();
@@ -111,7 +115,9 @@ const Dashboard = () => {
                         </div>
                         <div className="mb-3">
                             <label className="form-label">Booking Date</label>
-                            <input type="date" name="bookingDate" className="form-control" value={formData.bookingDate} onChange={handleChange} required />
+                            <input type="date" name="bookingDate" className="form-control"
+                                min={new Date().toISOString().split("T")[0]}
+                                value={formData.bookingDate} onChange={handleChange} required />
                         </div>
                         <div className="mb-3">
                             <label className="form-label">Booking Type</label>
@@ -143,6 +149,7 @@ const Dashboard = () => {
                                     required
                                     min="09:00"
                                     max="18:00"
+                                    step="1800"
                                 />
                             </div>
                         )}
